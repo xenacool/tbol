@@ -1,0 +1,8 @@
+[workspace]
+members = [
+    "tbol_gdext"
+]
+resolver = "2"
+
+[profile.bench]
+debug = true

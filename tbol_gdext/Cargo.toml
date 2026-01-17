@@ -1,0 +1,31 @@
+[package]
+name = "tbol"
+version = "1.0.0"
+edition = "2024"
+
+[dependencies]
+godot = {git = "https://github.com/godot-rust/gdext.git", features = ["register-docs"]}
+parry3d = "0.26.0"
+npc-engine-core = "0.1"
+npc-engine-utils = "0.1"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+crop = "0.4.3"
+glam = { version = "0.30", features = ["serde"] }
+bevy_reflect = "0.18.0"
+block-mesh = "0.2.0"
+mlua = { version = "0.11.6", features = ["luau-jit"] }
+yarnspinner = "0.7.0"
+log = "0.4.29"
+ron = "0.8.1"
+veilnet = "0.4.3"
+qrcode = "0.14.1"
+tokio = { version = "1.49.0", features = ["io-std"] }
+ghx_grid = { version = "0.8.0", features = ["serde"] }
+path-security = "0.2.0"
+
+[dev-dependencies]
+tempfile = "3.15.0"
+
+[lib]
+crate-type = ["cdylib"]

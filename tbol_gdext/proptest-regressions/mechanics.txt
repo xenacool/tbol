@@ -1,0 +1,7 @@
+# Seeds for failure cases proptest has generated in the past. It is
+# automatically read and these particular cases re-run before any
+# novel cases are generated.
+#
+# It is recommended to check this file in to source control so that
+# everyone who runs the test benefits from these saved cases.
+cc fe4793b2b9a217ef20bbdb8327093ca18160939c6b39022128676bb879db0b31 # shrinks to room = Room { room_id: 0, pos_x: 0, pos_y: 0, pos_z: 0, extent_x: 1, extent_y: 1, extent_z: 1, looping_x: false, looping_y: false, looping_z: false, tiles: {1: StaticTile(0)} }

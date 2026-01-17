@@ -1,0 +1,204 @@
+[gd_scene format=3 uid="uid://f85s2avde6r4"]
+
+[node name="Lobby" type="Control" unique_id=1080851767]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -325.0
+offset_top = -220.0
+offset_right = 315.0
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+
+[node name="Title" type="Label" parent="." unique_id=1792841403]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -110.0
+offset_top = -156.0
+offset_right = 110.0
+offset_bottom = -116.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "The Beam of Light"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TabContainer" type="TabContainer" parent="." unique_id=2063838672]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.15300001
+anchor_top = 0.26500002
+anchor_right = 0.15300001
+anchor_bottom = 0.26500002
+offset_left = 0.0799942
+offset_right = 482.08
+offset_bottom = 330.0
+current_tab = 0
+
+[node name="Local" type="Panel" parent="TabContainer" unique_id=1792895563]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Button" type="Button" parent="TabContainer/Local" unique_id=1762155649]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -20.600006
+offset_right = 23.0
+offset_bottom = 10.399994
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start"
+
+[node name="Network" type="IslandMultiplayerWizard" parent="TabContainer" unique_id=807921592 node_paths=PackedStringArray("host_button", "join_button", "status_ok", "status_fail", "port_forward_label", "find_public_ip_button", "dht_address")]
+host_button = NodePath("HostButton")
+join_button = NodePath("JoinButton")
+status_ok = NodePath("StatusOk")
+status_fail = NodePath("StatusFail")
+port_forward_label = NodePath("PortForward")
+find_public_ip_button = NodePath("FindPublicIP")
+dht_address = NodePath("DHTAddress")
+visible = false
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+metadata/_tab_index = 1
+
+[node name="AddressLabel" type="Label" parent="TabContainer/Network" unique_id=337827191]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = 77.0
+offset_bottom = 29.0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+text = "Address:"
+
+[node name="Address" type="LineEdit" parent="TabContainer/Network" unique_id=1710943539]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 37.0
+offset_right = 210.0
+offset_bottom = 68.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+text = "127.0.0.1"
+
+[node name="PortLabel" type="Label" parent="TabContainer/Network" unique_id=919955237]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 72.0
+offset_right = 54.0
+offset_bottom = 95.0
+text = "Port"
+
+[node name="Port" type="LineEdit" parent="TabContainer/Network" unique_id=419657915]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 97.0
+offset_right = 207.0
+offset_bottom = 128.0
+
+[node name="HostButton" type="Button" parent="TabContainer/Network" unique_id=1868757963]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 141.0
+offset_right = 89.0
+offset_bottom = 172.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+text = "Host"
+
+[node name="JoinButton" type="Button" parent="TabContainer/Network" unique_id=132400367]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 141.0
+offset_right = 202.0
+offset_bottom = 172.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+text = "Join"
+
+[node name="StatusOk" type="Label" parent="TabContainer/Network" unique_id=1921072080]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 173.0
+offset_right = 209.0
+offset_bottom = 196.0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+horizontal_alignment = 1
+
+[node name="StatusFail" type="Label" parent="TabContainer/Network" unique_id=912138561]
+modulate = Color(1, 0.427451, 0.345098, 1)
+layout_mode = 0
+offset_left = 10.0
+offset_top = 177.0
+offset_right = 210.0
+offset_bottom = 200.0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+horizontal_alignment = 1
+
+[node name="DHTAddress" type="Label" parent="TabContainer/Network" unique_id=1623993075]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 210.0
+offset_right = 120.0
+offset_bottom = 233.0
+
+[node name="PortForward" type="Label" parent="TabContainer/Network" unique_id=1997399303]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -278.0
+offset_top = 91.0
+offset_right = 25.0
+offset_bottom = 166.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "If you want non-LAN clients to connect,
+make sure the port 8910 in UDP
+is forwarded on your router."
+
+[node name="FindPublicIP" type="LinkButton" parent="TabContainer/Network" unique_id=808190478]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 61.0
+offset_top = 118.0
+offset_right = 269.0
+offset_bottom = 141.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Find your public IP address"
+uri = "icanhazip.com"
+
+[connection signal="pressed" from="TabContainer/Network/HostButton" to="TabContainer/Network" method="_on_host_pressed"]
+[connection signal="pressed" from="TabContainer/Network/JoinButton" to="TabContainer/Network" method="_on_join_pressed"]
+[connection signal="pressed" from="TabContainer/Network/FindPublicIP" to="TabContainer/Network" method="_on_find_public_ip_pressed"]
